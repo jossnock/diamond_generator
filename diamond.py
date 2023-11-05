@@ -1,9 +1,9 @@
 def diamond(n):
     if type(n) is int:
         if n<0:
-            return(None)
+            return("Please input a valid size")
         elif n%2==0:
-            return(None)
+            return("Please input a valid size")
         else:
             import math
             diamonds_on_row=1
@@ -24,14 +24,15 @@ def diamond(n):
     else:
         return(None)
 
+def make_diamond(size):
+    while True:
+        try:
+            print(diamond(int(size)))
+        except ValueError:
+            print("Please input a valid size")
+        else:
+            break
+        
+size=input('Input the size of the diamond:')
 
-
-
-
-
-    
-
-
-
-
-print(diamond(13))
+make_diamond(size)
